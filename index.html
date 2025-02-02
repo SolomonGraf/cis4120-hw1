@@ -1,0 +1,158 @@
+<html>
+
+<head>
+    <link href="/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="phone">
+        <div id="main" class="section">
+            <div id="main-info">
+                <p id="temperature">42°</p>
+                <p id="feels">Feels: 37°</p>
+                <img id="current-img" src="/assets/rain.png">
+            </div>
+            <img id="outfit" src="/assets/CoatPants.png">
+            <div class="info-box hour-mono notification">
+                    <p style="font-size: 11px;">SEVERE RAIN WARNING: 2 ft. expected</p>
+                    <p style="font-size: 8.5px;" class="notification-text">Authorities warn of severe rainstorms all night</p>
+                </span>
+            </div>
+        </div>
+        <div id="hourly" class="info-box section">
+            <div class="hour">
+                <p class="hour-mono">1p</p>
+                <img class="hourly-img" src="/assets/rain.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 95px"></div>
+                </div>
+                <p class="hour-mono">42</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">2p</p>
+                <img class="hourly-img" src="/assets/rain.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 125px"></div>
+                </div>
+                <p class="hour-mono">45</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">3p</p>
+                <img class="hourly-img" src="/assets/cloudy.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 145px"></div>
+                </div>
+                <p class="hour-mono">47</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">4p</p>
+                <img class="hourly-img" src="/assets/cloudy.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 135px"></div>
+                </div>
+                <p class="hour-mono">46</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">5p</p>
+                <img class="hourly-img" src="/assets/cloudy.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 115px"></div>
+                </div>
+                <p class="hour-mono">44</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">6p</p>
+                <img class="hourly-img" src="/assets/cloudy.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 85px"></div>
+                </div>
+                <p class="hour-mono">41</p>
+            </div>
+            <div class="hour">
+                <p class="hour-mono">7p</p>
+                <img class="hourly-img" src="/assets/rain.png" />
+                <div class="line-with-circles">
+                    <div class="line"></div>
+                    <div class="circle" style="left: -4px;"></div>
+                    <div class="circle" style="right: -4px;"></div>
+                    <div class="circle middle-circle" style="left: 65px"></div>
+                </div>
+                <p class="hour-mono">39</p>
+            </div>
+        </div>
+        <div id="daily" class="info-box section">
+            <div class="day">
+                <p class="mono">M</p>
+                <img class="daily-img" src="/assets/rain.png" />
+            </div>
+            <div class="day">
+                <p class="mono">T</p>
+                <img class="daily-img" src="/assets/rain.png" />
+            </div>
+            <div class="day">
+                <p class="mono">W</p>
+                <img class="daily-img" src="/assets/cloudy.png" />
+            </div>
+            <div class="day">
+                <p class="mono">R</p>
+                <img class="daily-img" src="/assets/cloudy.png" />
+            </div>
+            <div class="day">
+                <p class="mono">F</p>
+                <img class="daily-img" src="/assets/rain.png" />
+            </div>
+            <div class="day">
+                <p class="mono">S</p>
+                <img class="daily-img" src="/assets/cloudy.png" />
+            </div>
+            <div class="day">
+                <p class="mono">S</p>
+                <img class="daily-img" src="/assets/sunny.png" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    const notification = document.querySelector('.notification');
+    const notificationText = notification.querySelector('.notification-text');
+
+    let isExpanded = false;
+
+    notification.addEventListener('click', function () {
+        if (isExpanded) {
+            notification.style.height = '.35in';
+            notificationText.textContent = 'Authorities warn of severe rainstorms all night';
+        } else {
+            notification.style.height = '.7in';
+            notificationText.textContent = 'Authorities warn of severe rainstorms all night. Blizzard watch issued by National Weather Service from Monday at 1am to Tuesday at 10pm. Up to 2 feet of snow expected.';
+        }
+
+        isExpanded = !isExpanded;
+    });
+</script>
+
+</html>

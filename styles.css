@@ -1,0 +1,186 @@
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.info-box {
+    background-color: #e4e4e4a6;
+    border-radius: 5px;
+}
+
+.section {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 2.7in;
+}
+
+.mono {
+    font-family: "Spline Sans Mono";
+    font-weight: 700;
+    font-style: bold;
+    font-size: 30px;
+}
+
+.hour {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hour-mono {
+    font-family: "Spline Sans Mono";
+    font-weight: 700;
+    font-style: bold;
+    font-size: 20px;
+}
+
+.hourly-img {
+    width: .2in;
+    height: .2in;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.notification {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 2.5in;
+    height: .35in;
+    z-index: 10; /* Ensures it's above the content */
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.notification::after {
+    content: '+';
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    cursor: pointer; /* Optional, to make it feel interactive */
+}
+
+.line-with-circles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #666666;
+    position: absolute;
+}
+
+.middle-circle {
+    width: 10px;
+    height: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #666666;
+    position: relative;
+    z-index: 1;
+}
+
+.day {
+    margin-right: 4px;
+    margin-left: 4px;
+    height: .9in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.daily-img {
+    width: .3in;
+    height: .3in;
+}
+
+#phone {
+    display: flex;
+    flex-direction: column;
+    width: 2.8in;
+    height: 5.8in;
+    background-color: #a1aec3;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#main {
+    height: 2.2in;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+#main-info {
+    width: 1.6in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: bold;
+}
+
+#temperature {
+    font-size: 64px;
+    margin-bottom: -15px;
+}
+
+#feels {
+    font-size: 24px;
+}
+
+#current-img {
+    width: 1in;
+    height: 1in;
+}
+
+#outfit {
+    height: 100%
+}
+
+#hourly {
+    height: 2.3in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#daily {
+    height: 1in;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
